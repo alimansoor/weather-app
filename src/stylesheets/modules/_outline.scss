@@ -1,0 +1,53 @@
+.weather-outline {
+    ._city {
+        font-size: 3rem;
+        line-height: 1.5;
+    }
+
+    ._date, ._weather {
+        font-size: 1.4rem;
+        line-height: 1.5;
+    }
+
+    ._breakdown {
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        margin: 1.5rem 0;
+
+        .__left {
+            display: inline-flex;
+            align-items: center;
+
+            .___icon {
+                width: 55px;
+                height: 55px;
+            }
+            .___temperature {
+                font-size: 4rem;
+                font-weight: 500;
+
+                line-height: 0;
+                margin: 0 1.5rem;
+
+                .____unit {
+                    font-size: 2rem;
+                    vertical-align: middle;
+                    color: $color-secondary;
+                }
+            }
+        }
+       
+    }
+
+    .__right {
+        text-align: right;
+        line-height: 1.5;
+        color: $color-grey-base;
+        font-size: 1.4rem;
+    }
+
+    
+}

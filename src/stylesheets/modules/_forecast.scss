@@ -1,0 +1,52 @@
+.forecast {
+    text-align: center;
+    padding: 1.5rem;
+
+    background: $color-grey-light;
+
+    
+
+    &:hover {
+        background: $color-aqua-light;
+        cursor: pointer;
+    }
+
+    &.active {
+        border: 1px solid $color-aqua-base;
+        background: $color-aqua-light;
+    }
+
+    ._date {
+        font-size: 1.4rem;
+    }
+
+    ._icon {
+        width: 40px;
+        height: 40px;
+        margin: 1rem 0;
+    }
+
+    ._temperature {
+        display: flex;
+        justify-content: space-around;
+        font-size: 1.2rem;
+    }
+
+  
+
+
+
+    @include medium-size-screen {
+        ._icon {
+            width: 75px;
+            height: 75px;
+            margin: 1rem 0;
+        }
+    } 
+  
+    @include large-size-screen {
+    }
+  
+    @include xtra-large-size-screen {
+    }
+}

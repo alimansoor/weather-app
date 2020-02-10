@@ -1,0 +1,18 @@
+.header {
+
+    text-align: center;
+
+    ._logo {
+        width: 100px;
+        height: 100px;
+    }
+
+    @include medium-size-screen {
+    }
+  
+    @include large-size-screen {
+    }
+  
+    @include xtra-large-size-screen {
+    }
+}

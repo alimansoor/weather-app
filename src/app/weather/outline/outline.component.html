@@ -1,0 +1,17 @@
+<section class="weather-outline">
+    <span class="block _city txt-color-primary">{{location}}</span>
+    <span class="block _date txt-color-secondary">{{weather.applicable_date | date:'fullDate' }}</span>
+    <span class="block _weather txt-color-grey-base">{{weather.weather_state_name}}</span>
+    <section class="_breakdown">
+      <div class="__left">
+          <img class="___icon" [src]="_helper.getImagePath(weather.weather_state_abbr)" alt="weather-icon" aria-labelledby="weather-icon">
+          <span class="___temperature" *ngIf="unit === 'Celsius'">{{weather.the_temp | number : '1.0-0'}}&deg;<span class="____unit">C</span></span>
+          <span class="___temperature" *ngIf="unit === 'Fahrenheit'">{{_helper.convertTempToF(weather.the_temp) | number : '1.0-0'}}&deg;<span class="____unit">F</span></span>
+      </div>
+      <div class="__right">
+          <span class="block">Wind: {{weather.wind_speed | number : '1.0-0'}} mph</span>
+          <span class="block">Humidity: {{weather.humidity}}%</span>
+          <span class="block">Visibility: {{weather.visibility | number : '1.0-0'}} miles</span>
+      </div>
+    </section>
+</section>

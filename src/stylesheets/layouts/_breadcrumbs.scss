@@ -1,0 +1,30 @@
+.breadcrumbs {
+    ul {
+        display: flex;
+        font-size: 1.2rem;
+        color: $color-grey-base;
+        flex-wrap: wrap;
+
+        li {
+
+            a {
+                color: $color-grey-base;
+            }
+
+            &::after {
+                font-family: 'Font Awesome 5 Pro';
+                content: "\f0da";
+                margin: 0 1rem;
+                font-weight: 600;
+                color: $color-primary;
+                font-size: 1.2rem;
+            }
+
+            &:last-child {
+                &::after {
+                    content: "";
+                }
+            }
+        }
+    }
+}

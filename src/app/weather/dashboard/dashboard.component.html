@@ -1,0 +1,54 @@
+<main class="dashboard">
+    <div class="container">
+        <!-- Search Weather -->
+        <section class="_search my5" role="search">
+          <a routerLink="/search"> 
+            <img class="__icon" src="./assets/images/search.png" alt="logo">
+          </a>
+        </section>
+        <ng-container *ngIf="forecasts; else preloader">
+            <ng-container *ngIf="forecasts.length; else noDataFound">
+              <!-- Weather Outline -->
+    
+              <outline [weather]="selectedWeather" [location]="location" [unit]="unit" role="weather profile"></outline>
+    
+              <!-- Weather Forecast -->
+        
+              <section class="_forecast-of-the-week" role="weather forecast">
+                  <div class="row">
+                    <div class="col-lg-2 col-12 __forecasts" *ngFor="let forecast of forecasts">
+                      <forecast [forecast]="forecast" (showOutline)="setWeather($event)" [selectedWeather]="selectedWeather" [unit]="unit"></forecast>
+                    </div>
+                  </div>
+              </section>
+    
+              <!-- Switch Temperature Unit -->
+    
+              <div class="form-group txt-right-align my2">
+                <div class="weather-switch" role="switch">
+                  <div class="custom-control custom-switch">
+                    <input type="checkbox" class="custom-control-input" id="product-credit-card-is-sponsored"
+                          name="product-credit-card-is-sponsored" (change)="updateUnit()">
+                    <label class="custom-control-label" for="product-credit-card-is-sponsored" *ngIf="unit == 'Celsius'">Switch to Fahrenheit</label>
+                    <label class="custom-control-label" for="product-credit-card-is-sponsored" *ngIf="unit == 'Fahrenheit'">Switch to Celsius</label>
+                  </div>
+                </div>
+              </div>
+            </ng-container>
+            <ng-template #noDataFound>
+                <span class="txt-base">Unfortunately at this moment, we only provide weather forecast for <a routerLink="/dashboard/melbourne">Melbourne</a>, <a routerLink="/dashboard/london">London</a> and <a routerLink="/dashboard/sydney">Sydney</a>.</span>
+            </ng-template>
+        </ng-container>
+        <!-- Preloader -->
+        <ng-template #preloader>
+            <section class="preloader">
+                <img src="./assets/images/preloader.gif" alt="Preloader">
+            </section>    
+        </ng-template>
+        
+       
+    </div>
+    
+    
+    
+</main>

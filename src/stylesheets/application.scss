@@ -1,0 +1,44 @@
+/*
+Application: PwC Weather App
+Author: Muhammad Ali Mansoor
+Author URI: muhammad.mansoor@live.com
+Description: PwC Weather App in Angular 8
+Version: 1.0.0
+*/
+
+// Vendors
+@import "vendors/fonts";
+@import "vendors/jquery-ui";
+@import "vendors/bootstrap/bootstrap";
+
+// Variables and Mixins
+@import "utils/variables";
+@import "utils/functions";
+@import "utils/mixins";
+@import "utils/extends";
+@import "utils/helpers";
+
+// Base
+@import "base/reset";
+@import "base/typography";
+@import "base/colors";
+@import "base/grid";
+
+//Themes
+@import "themes/default";
+
+//Pages
+@import "pages/404";
+@import "pages/dashboard";
+
+//Layouts
+@import "layouts/header";
+@import "layouts/footer";
+@import "layouts/form";
+
+// Modules
+@import "modules/preloader";
+@import "modules/forecast";
+@import "modules/outline";
+
+

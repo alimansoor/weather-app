@@ -1,0 +1,20 @@
+[
+    {
+        "title": "Melbourne",
+        "location_type": "City",
+        "woeid": 1103816,
+        "latt_long": "-37.817532,144.967148"
+    },
+    {
+        "title": "Sydney",
+        "location_type": "City",
+        "woeid": 1105779,
+        "latt_long": "-33.869629, 151.206955"
+    },
+    {
+        "title": "London",
+        "location_type": "City",
+        "woeid": 44418,
+        "latt_long": "51.506321,-0.12714"
+    }
+]

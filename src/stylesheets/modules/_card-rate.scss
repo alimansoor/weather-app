@@ -1,0 +1,330 @@
+.card-rate {
+    display: flex;
+    align-items: flex-start;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    margin: 2.5rem 0;
+    padding: 1rem;
+
+    ._left {
+        display: inline-flex;
+        align-items: center;
+        flex-direction: column;
+
+        .__brand {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            border-radius: 0.5rem;
+            width: 85px;
+            min-height: 50px;
+        }
+
+        .__compare {
+            margin: 0.5rem 0 0 0;
+            display: inline-flex;
+            align-items: center;
+
+            label {
+                padding: 0 0.5rem;
+                font-size: 1rem;
+            }
+        }
+    }
+
+    ._right {
+        width: 100%;
+
+        .__top {
+            display: inline-flex;
+            width: 100%;
+            flex-wrap: wrap;
+
+            .___title {
+                font-size: 1.2rem;
+                line-height: 1.5;
+                width: 100%;
+            }
+
+            .___rate-set {
+                display: inline-flex;
+                padding: 1rem 0 0 0;
+
+                ._rate {
+                    flex: 1;
+                }
+
+            }
+
+
+            .____toggle {
+                margin: 1rem 0 0 0;
+                cursor: pointer;
+                color: $color-grey-base;
+            }
+
+            .___url {
+                flex: 1;
+                display: inline-flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                border: none;
+                margin: 1.5rem 0;
+
+                div {
+                    margin: 0;
+                }
+
+                .____toggle {
+                    margin: 0;
+                    cursor: pointer;
+                    color: $color-grey-base;
+                }
+            }
+        }
+
+        .__bottom {
+            display: none;
+            /*
+            Inline-flex with column direction was used at first but it worked with display: block (Jquery slideDown). Verification required.
+            */
+            //display: inline-flex;
+            //flex-direction: column;
+            width: 100%;
+
+            .___rate-set {
+                display: inline-flex;
+                flex-wrap: wrap;
+                padding: 1rem 0 0 0;
+
+                ._rate {
+                    margin: 0 0 1rem 0;
+                    flex: 33.33%;
+
+                }
+
+                .__percentage {
+                    font-size: 1.2rem;
+                }
+            }
+
+            .___features {
+                padding: 1rem 0 0 0;
+
+                .____title {
+                    font-size: 1.2rem;
+                    padding: 0 0 1.5rem 0;
+
+                }
+
+
+
+                .capsule {
+                    border-radius: 0.5rem;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 0.5rem 1rem;
+                    margin: 0 0.5rem 0.5rem 0;
+                    font-size: 1rem;
+                    min-width: 12.5%;
+
+
+                    span {
+                        margin-right: 1rem;
+                    }
+
+
+                    &._available {
+                        border: none;
+                        color: #35cc62;
+                    }
+
+                    &._unavailable {
+                        border: none;
+                        color: #e35e42;
+                    }
+                }
+            }
+
+            .___fees {
+                padding: 1rem 0 0 0;
+                display: inline-flex;
+                width: 100%;
+                flex-wrap: wrap;
+
+                .____title {
+                    font-size: 1.2rem;
+                    width: 100%;
+                }
+            }
+        }
+
+        ._rate {
+            text-align: center;
+
+            border-right: 1px solid $color-grey-light;
+
+            &:last-child {
+                border: none;
+            }
+
+            &:nth-child(3n) {
+                border: none;
+            }
+
+            .__title {
+                word-spacing: 100vw;
+                text-transform: uppercase;
+                color: $color-grey-base;
+                line-height: 1.25;
+                font-size: 0.75rem;
+                font-weight: 400;
+            }
+
+            .__percentage {
+                font-size: 1.6rem;
+                font-weight: 600;
+                line-height: 1.5;
+                margin: 0.75rem 0 0 0;
+            }
+        }
+    }
+
+    @include medium-size-screen {}
+
+    @include large-size-screen {
+
+        ._left {
+
+
+
+            .__brand {
+                border: 1px solid $color-grey-light;
+                border-radius: 0.5rem;
+                padding: 1.5rem;
+                margin: 0 1.5rem;
+                width: 135px;
+                min-height: 90px;
+            }
+
+            .__compare {
+                border: 1px solid $color-grey-light;
+                border-radius: 0.5rem;
+                padding: 1rem;
+                width: 135px;
+
+
+                label {
+                    padding: 0 1rem;
+                    font-size: 1.2rem;
+                }
+            }
+        }
+
+        ._right {
+
+            .__top {
+
+                .___title {
+                    font-size: 1.4rem;
+                }
+
+                .___rate-set {
+                    flex: 1;
+                    padding: 2.5rem 0 0 0;
+
+                    ._rate {
+                        flex: 1;
+                    }
+
+                }
+
+                .___url {
+                    display: inline-flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    //border-left: 1px solid $color-grey-light;
+
+                    div {
+                        margin: 0 0.25rem;
+                        width: 65%;
+                    }
+
+                    .____toggle {
+                        margin: 1rem 0 0 0;
+                    }
+                }
+
+            }
+
+            ._rate {
+
+                &:nth-child(3) {
+                    border-right: 1px solid $color-grey-light;
+                }
+
+                .__title {
+                    font-size: 1rem;
+                    font-weight: 200;
+                }
+
+                .__percentage {
+                    font-size: 1.8rem;
+                    font-weight: 600;
+                    margin: 0.75rem 0 0 0;
+                }
+            }
+
+            .__bottom {
+                .___rate-set {
+
+                    padding: 2.5rem 0 0 0;
+
+                    ._rate {
+                        margin: 0;
+                        flex: 1;
+
+                    }
+
+                    .__percentage {
+                        font-size: 1.8rem;
+                    }
+                }
+
+                .___features {
+                    padding: 2.5rem 0 0 0;
+
+                    .____title {
+                        font-size: 1.4rem;
+                    }
+
+
+                    .capsule {
+                        font-size: 1.4rem;
+
+                        &._available {
+                            border: 1px solid #35cc62;
+                        }
+
+                        &._unavailable {
+                            border: 1px solid #e35e42;
+                        }
+                    }
+                }
+
+                .___fees {
+                    padding: 2.5rem 0 0 0;
+
+                    .____title {
+                        font-size: 1.4rem;
+                    }
+                }
+            }
+
+        }
+    }
+}

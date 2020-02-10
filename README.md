@@ -1,21 +1,12 @@
 # Weather App
 
-Weather App SPA project is created as part of development challenge at PwC. The project is developed with the Angular 8, Typescript, Twitter Bootstrap v4.3, OMCSS framework (SCSS), Google Fonts, Font Awesome. 
+Weather App (SPA) project is created as part of development challenge at PwC. The project is developed with the Angular 8, Typescript, Twitter Bootstrap v4.3, OMCSS framework (SCSS), Google Fonts, Font Awesome. 
 
-Some of the salient features of the project includes RxJS, HttpClient (API Service), Routes and Route Params, Databinding, Interpolation, Concept of Models, Template Driven Forms, Validation and Sanitization, TDD, WAI-ARIA and Component Based Architecture.
+Some of the salient features of the project are RxJS, HttpClient (API Service), Routes and Route Params, Databinding, Interpolation, Data Models, Template Driven Forms, Validation and Sanitization, Test Driven Development, WAI-ARIA and Component Based Architecture.
 
 ## Getting Started
 
 Weather App is a free project that will provide users with an overview of weather for different locations. It also provides users with weather forecast of the entire week. User will have the option to switch temperature unit from celsius to fahrenheit. User can also select and view weather for different locations. 
-
-Below are major pages/components of the application:
-
-* **Dashboard**
-Dashboard is the main section of the application which provides users with weather profile, weather forecasts, search and switch temperature. User can view detail profile of the selected weather from the week's forecast.
-
-* **Search**
-
-* **Page Not Found**
 
 You can download the project from the below options available:
 
@@ -29,7 +20,7 @@ You can download the project from the below options available:
 
 [Angular CLI](https://angular.io/) is required to run the application.
 
-### Component Structure 
+### Project Architecture 
 
 ```
 app/
@@ -64,53 +55,32 @@ ng build --prod
 
 ## Documentation
 
-OMCSS is an approach that will help designers and developers write code that will be future-clean and scalable at the same time. OMCSS' file structure helps developer organise their stylesheets in a manner that produces understandable and clean css structure that is easy to organise and maintain - OMCSS
+Weather App is a free project that will provide users with an overview of weather for different locations. It also provides users with weather forecast of the entire week. User will have the option to switch temperature unit from celsius to fahrenheit. User can also select and view weather for different locations. 
 
-### OMCSS File Structure
+### Project Overview
 
-OMCSS is a modular approach that helps you arrange your css into `theme`, `pages`, `layouts` and `modules`. Along with these, it also provide helper folders i.e. `base`, `utils` and `vendors` to organise your helper css files.
+Below are major pages/components of the application:
 
-Below is a complete description of OMCSS file structure:
+* **Dashboard**
+is the main section `http://localhost:4200/dashboard` of the application which provides users with weather profile, weather forecasts, search and switch temperature. User can view detail profile of the selected weather from the week's forecast.
 
-* **Base**
-Base contains css styles on base content such as reset, grid, typography etc.
+* **Search**
+is used to allow user to enter location of their choice and view the weather forcast. User can navigate to search page `http://localhost:4200/search` from the main dashboard. It is build with Template Driven Forms.
 
-* **Themes**
-Themes contains css styles for your application themes such as primary, secondary, default, dashboard etc.
+* **Page Not Found**
+is the page `http://localhost:4200/xyz` which appears when the server returns a 404 response.
 
-* **Pages**
-Pages contains css styles for your individual pages such as home, about-us, contact etc.
+### API
 
-* **Layouts**
-Layouts contains css style for main application components such as header, footer, sidebar etc.  
+Weather App started with MetaWeather `https://www.metaweather.com/api/` API. However, in the middle of development, we realized that the API doesn't allow CORS. At the present moment, we have to copy the data from the MetaWeather API over to the application. The project have used the same concept of service with HttpClient with RxJS to fetch to show competence.  
 
-* **Modules**
-Modules contains css style for re-usable application ui components such as carousel, navigation, breadcrumb, card etc.
-
-* **Utils**
-Modules contains utility styles such as mixins, functions, variables etc.
-
-* **Vendors**
-Vendor contains third-party css libraries and frameworks such as jquery-ui, bootstrap, foundation etc.
-
-* **Shame**
-Shame contains css styles that you are shame about or you have written as an urgent request and will soon change it and write proper code. Its wise to write messy css for any of the above styles over here.
+At present moment, we have stored the data for Melbourne, London and Sydney.
 
 ### Naming Convention
 
-OMCSS follows Kebab case naming convention in its core e.g. `.txt-white`, `.nav-item` etc.
+Business Logic is written with camel case naming convention. `setTemperature`, `getWeather` etc.
 
-For components that contains sub-classes, OMCSS encourages `_underscore` naming convention which add an underscore as it goes within the tree:
-
-```
-.parent {
-  ._child {
-    .__sub-child {
-      ...
-    }
-  }
-}
-```
+HTML and SCSS follows Kebab case naming convention. `.txt-white`, `.nav-item` etc.
 
 Please note that above convention is not mandatory. It will facilitate developers to write consistent and future-proof code. However you are free to use any convention of your choice.
 

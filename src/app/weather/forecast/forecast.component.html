@@ -1,0 +1,15 @@
+<section class="forecast my1" (click)="setWeather(forecast)" [ngClass]="{'active': forecast.id === selectedWeather.id}" role="forecast button" [attr.aria-selected]="forecast.id === selectedWeather.id">
+    <span class="_date block">{{_helper.getDay(_helper.getDayId(forecast.applicable_date))}}</span> 
+    <img class="_icon" [src]="_helper.getImagePath(forecast.weather_state_abbr)"  alt="weather-icon" aria-labelledby="weather-icon">
+    <div class="_temperature" role="temperature">
+      <ng-container *ngIf="unit === 'Celsius'">
+          <span aria-labelledby="min temp"><span class="lg-hide">Min </span>{{forecast.min_temp | number : '1.0-0'}}&deg;</span>
+          <span aria-labelledby="max temp"><span class="lg-hide">Max </span>{{forecast.max_temp | number : '1.0-0'}}&deg;</span>
+      </ng-container>
+      <ng-container *ngIf="unit === 'Fahrenheit'">
+          <span aria-labelledby="min temp"><span class="lg-hide">Min </span>{{_helper.convertTempToF(forecast.min_temp) | number : '1.0-0'}}&deg;</span>
+          <span aria-labelledby="max temp"><span class="lg-hide">Max </span>{{_helper.convertTempToF(forecast.max_temp) | number : '1.0-0'}}&deg;</span>
+      </ng-container>
+
+    </div>
+</section>

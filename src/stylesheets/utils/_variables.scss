@@ -1,0 +1,70 @@
+//Grid System Breakpoints - screen size
+
+$screen-medium: 768px;
+$screen-large: 1024px;
+$screen-xtra-large: 1200px;
+
+//Colors
+$color-primary: #c98c32;;
+
+$color-secondary: #00697d;
+
+
+$color-transparent: transparent;
+$color-black: #000;
+$color-white: #FFF;
+
+
+/* Aqua */
+
+$color-aqua-darkest: transparent;
+$color-aqua-darker: #389c97;
+$color-aqua-dark: #4FC3BD;
+$color-aqua-base: #9DE2DF;
+$color-aqua-light: #e5fffe;
+$color-aqua-lighter: transparent;
+$color-aqua-lightest: transparent;
+
+/* Orange */
+
+$color-orange-darkest: transparent;
+$color-orange-darker: #e4754f;
+$color-orange-dark: #fd855b;
+$color-orange-base: #ffe6dd;
+$color-orange-light: #fff0eb;
+$color-orange-lighter: transparent;
+$color-orange-lightest: transparent;
+
+
+/* Grey */
+
+$color-grey-darkest: #717187;
+$color-grey-darker: #7A7A7A;
+$color-grey-dark: #494949;
+$color-grey-base: #767676;
+$color-grey-light: #fbf9f5;
+$color-grey-lighter: #f5f5f7;
+$color-grey-lightest: #fafbff;
+
+
+//Font Family
+
+$font-sans-serif: sans-serif;
+$font-serif: serif;
+$font-mono: monospace;
+$font-cursive: cursive;
+
+$font-default: sans-serif;
+
+$font-primary: 'Poppins';
+$font-secondary: 'Nunito';
+$font-brand: '';
+
+//Spacing
+
+$space-1: 0.5rem; //5px
+$space-2: 1rem; //10px
+$space-3: 1.5rem;
+$space-4: 2rem;
+$space-5: 2.5rem;
+$space-6: 5rem;

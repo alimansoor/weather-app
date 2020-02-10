@@ -1,0 +1,28 @@
+<section class="search" role="search">
+  <div class="container">
+      <div class="alert alert-warning txt-sm" role="alert">
+          <em class="font-semibold">Note:</em> Unfortunately at this moment, we only provide weather forecast for <a routerLink="/dashboard/melbourne">Melbourne</a>, <a routerLink="/dashboard/london">London</a> and <a routerLink="/dashboard/sydney">Sydney</a>.
+        </div>
+      <form action="" #weatherForm="ngForm" (ngSubmit)="onSubmit()" novalidate>
+      <div class="form-group">
+          <label for="weather-forecast" class="txt-sm txt-color-secondary">Enter Location</label>
+          <div class="input-group">
+            <input type="text"
+              #location="ngModel"
+              required
+              pattern="^[a-zA-Z ]*$"
+              [class.is-invalid]="location.invalid && location.touched"
+              [class.is-valid]="location.valid && location.touched && location.value"
+              class="form-control"
+              name="weather-forecast"
+              [(ngModel)]="formModel.location" 
+            />
+            <div class="input-group-append">
+              <button [disabled]="weatherForm.form.invalid" class="btn btn-attached btn-primary" type="submit">Search</button>
+            </div>
+          </div>
+          <small class="indicator inline-block" [class.d-none]="location.valid || location.untouched">Location must not contain numbers and/or special characters</small> 
+        </div>
+      </form>
+  </div>
+</section>
