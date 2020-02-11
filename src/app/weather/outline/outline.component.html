@@ -4,9 +4,9 @@
     <span class="block _weather txt-color-grey-base">{{weather.weather_state_name}}</span>
     <section class="_breakdown">
       <div class="__left">
-          <img class="___icon" [src]="_helper.getImagePath(weather.weather_state_abbr)" alt="weather-icon" aria-labelledby="weather-icon">
+          <img class="___icon" [src]="helper.getImagePath(weather.weather_state_abbr)" alt="weather-icon" aria-labelledby="weather-icon">
           <span class="___temperature" *ngIf="unit === 'Celsius'">{{weather.the_temp | number : '1.0-0'}}&deg;<span class="____unit">C</span></span>
-          <span class="___temperature" *ngIf="unit === 'Fahrenheit'">{{_helper.convertTempToF(weather.the_temp) | number : '1.0-0'}}&deg;<span class="____unit">F</span></span>
+          <span class="___temperature" *ngIf="unit === 'Fahrenheit'">{{helper.convertTempToF(weather.the_temp) | number : '1.0-0'}}&deg;<span class="____unit">F</span></span>
       </div>
       <div class="__right">
           <span class="block">Wind: {{weather.wind_speed | number : '1.0-0'}} mph</span>

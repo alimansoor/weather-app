@@ -24,7 +24,7 @@ export class ForecastComponent implements OnInit {
   @Input()
   unit: string;
 
-  constructor(private _helper: HelperService) { }
+  constructor(public helper: HelperService) { }
 
   ngOnInit() {
   }

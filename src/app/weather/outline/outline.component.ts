@@ -22,7 +22,7 @@ export class OutlineComponent implements OnInit {
   @Input()
   location: string;
 
-  constructor(private _helper: HelperService) { }
+  constructor(public helper: HelperService) { }
 
   ngOnInit() {
   }
