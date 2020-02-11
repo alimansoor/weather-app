@@ -2,7 +2,7 @@
 
 Weather App (SPA) project is created as part of development challenge at PwC. The project is developed with the Angular 8, Typescript, Twitter Bootstrap v4.3, OMCSS framework (SCSS), Google Fonts, Font Awesome. 
 
-Some of the salient features of the project are RxJS, HttpClient (API Service), Routes and Route Params, Databinding, Interpolation, Data Models, Template Driven Forms, Validation and Sanitization, Test Driven Development, WAI-ARIA and Component Based Architecture.
+Some of the salient features of the project are RxJS, HttpClient (API Service), Routes and Route Params, Data binding, Interpolation, Data Models, Template Driven Forms, Validation and Sanitization, Test Driven Development, WAI-ARIA and Component Based Architecture.
 
 ![Dashboard](https://github.com/alimansoor/weather-app/blob/master/Dashboard.png)
 
@@ -22,6 +22,20 @@ You can download the project from the below options available:
 
 [Angular CLI](https://angular.io/) is required to run the application.
 
+## Deployment
+
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+```
+ng serve
+```
+
+You can also run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+
+```
+ng build --prod
+```
+
 ### Project Architecture 
 
 ```
@@ -39,20 +53,6 @@ app/
 │   
 └── app.component
 
-```
-
-## Deployment
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-```
-ng serve
-```
-
-You can also run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-```
-ng build --prod
 ```
 
 ## Documentation
