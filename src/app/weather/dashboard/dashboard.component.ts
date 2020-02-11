@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
+import { Title, Meta } from '@angular/platform-browser';
+
 //model
 import { forecasts } from '../../../assets/data/weather';
 import { IWeatherForecast } from '../models/api.model';
@@ -12,6 +14,7 @@ import { WeatherService } from '../services/weather.service';
 //rxjs
 import { fromEvent, of } from 'rxjs';
 import { mergeMap, delay } from 'rxjs/operators';
+
 
 
 @Component({
@@ -35,9 +38,13 @@ export class DashboardComponent implements OnInit {
 
   constructor(private _weatherService: WeatherService, 
     private _router: Router, 
-    private _route: ActivatedRoute) { }
+    private _route: ActivatedRoute,
+    private _title: Title,
+    private _meta: Meta) { }
 
   ngOnInit() {
+
+    this._title.setTitle('Dashboard');
 
      // GET ROUTE PARAM
      this._route.paramMap.subscribe((params: ParamMap) => {
