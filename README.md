@@ -76,12 +76,6 @@ Weather App started with MetaWeather `https://www.metaweather.com/api/` API. How
 
 At present moment, we have stored the data for Melbourne, London and Sydney.
 
-### TODO
-
-- Use GeoLocation to get current location coordinates
-- Use LocalStorage to save favourite locations
-- Create notification mechanism
-
 
 ### Naming Convention
 
@@ -90,6 +84,13 @@ Business Logic is written with camel case naming convention. `setTemperature`, `
 HTML and SCSS follows Kebab case naming convention. `.txt-white`, `.nav-item` etc.
 
 Please note that above convention is not mandatory. It will facilitate developers to write consistent and future-proof code. However you are free to use any convention of your choice.
+
+### TODO
+
+- Use GeoLocation to get current location coordinates
+- Use LocalStorage to save favourite locations
+- Create notification mechanism
+
 
 
 ## Versioning
