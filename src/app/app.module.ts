@@ -23,7 +23,7 @@ import { WeatherService } from './weather/services/weather.service';
     AppComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     FormsModule,
     HttpClientModule,
     AppRoutingModule,
