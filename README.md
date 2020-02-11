@@ -76,6 +76,13 @@ Weather App started with MetaWeather `https://www.metaweather.com/api/` API. How
 
 At present moment, we have stored the data for Melbourne, London and Sydney.
 
+### TODO
+
+- Use GeoLocation to get current location coordinates
+- Use LocalStorage to save favourite locations
+- Create notification mechanism
+
+
 ### Naming Convention
 
 Business Logic is written with camel case naming convention. `setTemperature`, `getWeather` etc.
