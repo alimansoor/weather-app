@@ -4,6 +4,8 @@ Weather App (SPA) project is created as part of development challenge at PwC. Th
 
 Some of the salient features of the project are RxJS, HttpClient (API Service), Routes and Route Params, Databinding, Interpolation, Data Models, Template Driven Forms, Validation and Sanitization, Test Driven Development, WAI-ARIA and Component Based Architecture.
 
+![Dashboard](https://github.com/alimansoor/weather-app/blob/master/Dashboard.png)
+
 ## Getting Started
 
 Weather App is a free project that will provide users with an overview of weather for different locations. It also provides users with weather forecast of the entire week. User will have the option to switch temperature unit from celsius to fahrenheit. User can also select and view weather for different locations. 
