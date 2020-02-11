@@ -72,7 +72,7 @@ is the page `http://localhost:4200/xyz` which appears when the server returns a 
 
 ### API
 
-Weather App started with MetaWeather `https://www.metaweather.com/api/` API. However, in the middle of development, we realized that the API doesn't allow CORS. At the present moment, we have to copy the data from the MetaWeather API over to the application. The project have used the same concept of service with HttpClient with RxJS to fetch to show competence.  
+Weather App started with MetaWeather `https://www.metaweather.com/api/` API. However, in the middle of development, it was found that the API doesn't allow CORS and I have to copy over some of the data from the MetaWeather API to `assets/data/`. However, the project uses the same concept of service with HttpClient with RxJS to fetch to data as used with an external API.  
 
 At present moment, we have stored the data for Melbourne, London and Sydney.
 
