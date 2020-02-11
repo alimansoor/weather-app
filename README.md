@@ -90,6 +90,8 @@ Please note that above convention is not mandatory. It will facilitate developer
 - Use GeoLocation to get current location coordinates
 - Use LocalStorage to save favourite locations
 - Create notification mechanism
+- Optimizing Crawling for Angular (SEO) friendly
+- Progressive Web App
 
 
 
