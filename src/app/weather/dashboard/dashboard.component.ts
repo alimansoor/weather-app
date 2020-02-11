@@ -62,7 +62,9 @@ export class DashboardComponent implements OnInit {
     this._router.navigate(['/dashboard', param]);
   }
 
-  getWeather(location: string = 'melbourne') {
+  getWeather(location : string) {
+    location = location || 'melbourne';
+    console.log(location);
     this._weatherService.getLocationId(location).pipe(mergeMap(response => this._weatherService.getWeather(response.woeid))).subscribe(
       data => {
         this.forecasts = data.consolidated_weather;
