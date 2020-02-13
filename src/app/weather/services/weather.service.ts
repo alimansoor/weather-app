@@ -8,7 +8,7 @@ import { catchError, } from 'rxjs/operators';
 import { mergeMap, delay } from 'rxjs/operators';
 
 // model
-import { ILocation, IWeather } from '../models/api.model';
+import { ILocation, IWeather, IGeoLocation } from '../models/api.model';
 
 // model
 
@@ -38,5 +38,20 @@ export class WeatherService {
     return this._http.get<IWeather[]>(url).pipe(
       map(response => response.filter(obj => obj.woeid === id)[0])
     ); 
+  }
+
+  public getCoordinates() : Promise<Object> {
+    return new Promise((resolve, reject) => {
+      if(this._isGeoLocationSupported) {
+        navigator.geolocation.getCurrentPosition(response => resolve({longitude: response.coords.longitude, latitude: response.coords.latitude}));
+      }
+      else {
+        reject(Error("Geolocation is not supported by this browser."));
+      }
+    });
+  }
+
+  _isGeoLocationSupported() {
+    navigator.geolocation ? true : false;
   }
 }

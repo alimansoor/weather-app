@@ -53,6 +53,11 @@ export class DashboardComponent implements OnInit {
 
       // CALL WEATHER API
       this.getWeather(this.param);   
+
+      // GET USER COORDINATES
+      this._weatherService.getCoordinates().then(coords => {
+        console.log("Geolocation Coordinates", coords);
+      })
     });
   }
 

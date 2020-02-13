@@ -52,3 +52,18 @@ interface IDataSource {
     crawl_rate: number
 }
 
+export interface IGeoLocation {
+    coords: Coordinates,
+    timestamp: number
+}
+
+interface Coordinates {
+    latitude: number,
+    longitude: number
+    altitude: number
+    accuracy: number
+    altitudeAccuracy: number
+    heading: number
+    speed: number
+}
+
